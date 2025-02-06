@@ -1,17 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from "./Components/common/header/Header"
+
 // import Home from './Pages/Home';
-import LoginSignup from './Pages/LoginSignup';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/login" element={<LoginSignup />} />
-      </Routes>
-    </Router>
+    // <Router>
+    //   <Header />
+    //   <Routes>
+    //     {/* <Route path="/" element={<Home />} /> */}
+    //     {/* <Route path="/login" element={<LoginSignup />} /> */}
+    //     <Route path="/register" element={<Register />} />
+    //   </Routes>
+    // </Router>
+
+    
+    <Navbar/>
   );
 }
 
