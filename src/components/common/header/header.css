@@ -1,0 +1,97 @@
+/*-------- Header Styling ------------*/
+.head {
+  padding: 20px 0;
+  color: #fff;
+}
+
+.logo h1 {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #145d25fd;
+  padding: 15px 20px;
+}
+.logo{
+  width: 100px;
+  height: auto;
+}
+ul {
+  display: flex; /* Horizontal alignment */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  margin: 0 15px; /* Space between items */
+}
+
+.list a {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.list a:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Button styling */
+.start .button {
+  background-color: #fff;
+  color: #1eb2a6;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.start .button:hover {
+  background: #fff;
+  color: #1eb2a6;
+}
+
+/* Toggle Button (For Mobile) */
+.toggle {
+  display: none;
+  background: none;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/*-------- Responsive Navbar ------------*/
+@media screen and (max-width: 768px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #1eb2a6;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .list {
+    padding: 15px 0;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
