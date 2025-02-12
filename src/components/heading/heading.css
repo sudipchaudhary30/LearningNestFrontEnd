@@ -1,0 +1,146 @@
+ .head{
+    padding: 20px 0;
+    color: black;
+
+ }
+
+.logoimg{
+    width: 160px;
+    height: auto;
+   margin-right: 600px;
+   
+  }
+
+.head .icon{
+    margin-left: 10px;
+
+}  
+
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navigation Links */
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Bottom Line Effect on Hover */
+.nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+/* Start Button */
+.start .button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.start .button:hover {
+  background: #0056b3;
+}
+
+/* Toggle Button */
+.toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .nav {
+    padding: 15px 30px;
+  }
+
+  .nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-200%);
+  }
+
+  .nav ul.mobile-nav {
+    transform: translateY(0);
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
