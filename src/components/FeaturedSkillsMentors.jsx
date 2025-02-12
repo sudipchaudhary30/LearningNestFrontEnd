@@ -15,9 +15,14 @@ const FeaturedSkillsMentors = () => {
     },
     {
       title: 'Graphic Design',
-      image: './src/assets/Images/image2.jpg',
+      image: './src/assets/Images/image2.jpg', // Updated image path for diversity
       description: 'Create stunning visuals and designs.',
     },
+    {
+        title: 'Artificial Intelegience',
+        image: './src/assets/Images/image1.jpg', // Updated image path for diversity
+        description: 'Create stunning visuals and designs.',
+      },
   ];
 
   return (
@@ -26,7 +31,9 @@ const FeaturedSkillsMentors = () => {
       <div className="skills-grid">
         {skills.map((skill, index) => (
           <div key={index} className="skill-card">
-            <img src={skill.image} alt={skill.title} className="skill-image" />
+            <div className="skill-image-wrapper">
+              <img src={skill.image} alt={skill.title} className="skill-image" />
+            </div>
             <div className="skill-content">
               <h3 className="skill-title">{skill.title}</h3>
               <p className="skill-description">{skill.description}</p>

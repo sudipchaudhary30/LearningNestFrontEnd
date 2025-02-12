@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Icons for mobile menu
 import './Navbar.css'; // Import CSS for styling
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -28,7 +28,7 @@ const Navbar = () => {
       </div>
 
       {/* Call-to-Action Button */}
-      <button className="cta-button">Get Started</button>
+      <Link to="/auth" className="cta-button">Get Started</Link>
     </nav>
   );
 };

@@ -1,12 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
+import { createRoot } from 'react-dom/client'; // Correct import for React 18
 import App from './App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter> {/* Wrap App with BrowserRouter */}
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+// Create a root and render the app
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
