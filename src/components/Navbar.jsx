@@ -17,7 +17,7 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
         <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
-        <li><Link to="/skills" onClick={() => setIsMobileMenuOpen(false)}>Skills</Link></li>
+        <li><Link to="/skills" onClick={() => setIsMobileMenuOpen(false)}>Explore skills</Link></li>
         <li><Link to="/mentors" onClick={() => setIsMobileMenuOpen(false)}>Mentors</Link></li>
         <li><Link to="/communities" onClick={() => setIsMobileMenuOpen(false)}>Communities</Link></li>
       </ul>

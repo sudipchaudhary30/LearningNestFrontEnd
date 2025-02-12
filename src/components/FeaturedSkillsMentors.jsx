@@ -1,41 +1,38 @@
-// components/FeaturedSkillsMentors.jsx
 import React from 'react';
-import { motion } from 'framer-motion';
+import './FeaturedSkillsMentors.css'; // Import CSS for styling
 
 const FeaturedSkillsMentors = () => {
-  const skills = ['Python', 'Graphic Design', 'Photography', 'Data Science'];
-  const mentors = [
-    { name: 'John Doe', expertise: 'Python Expert', image: 'url-to-image' },
-    { name: 'Jane Smith', expertise: 'Design Pro', image: 'url-to-image' },
+  const skills = [
+    {
+      title: 'Web Development',
+      image: './src/assets/Images/image1.jpg',
+      description: 'Learn to build modern websites and web applications.',
+    },
+    {
+      title: 'Data Science',
+      image: './src/assets/Images/image2.jpg',
+      description: 'Master data analysis, machine learning, and AI.',
+    },
+    {
+      title: 'Graphic Design',
+      image: './src/assets/Images/image2.jpg',
+      description: 'Create stunning visuals and designs.',
+    },
   ];
 
   return (
-    <section className="featured-section">
-      <h2>Featured Skills & Mentors</h2>
+    <section className="featured-skills">
+      <h2 className="section-title">Featured Skills & Mentors</h2>
       <div className="skills-grid">
         {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            className="skill-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>{skill}</h3>
-            <button>Learn More</button>
-          </motion.div>
-        ))}
-      </div>
-      <div className="mentors-grid">
-        {mentors.map((mentor, index) => (
-          <motion.div
-            key={index}
-            className="mentor-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img src={mentor.image} alt={mentor.name} />
-            <h3>{mentor.name}</h3>
-            <p>{mentor.expertise}</p>
-            <button>Connect</button>
-          </motion.div>
+          <div key={index} className="skill-card">
+            <img src={skill.image} alt={skill.title} className="skill-image" />
+            <div className="skill-content">
+              <h3 className="skill-title">{skill.title}</h3>
+              <p className="skill-description">{skill.description}</p>
+              <button className="skill-button">Learn More</button>
+            </div>
+          </div>
         ))}
       </div>
     </section>

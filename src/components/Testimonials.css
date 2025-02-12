@@ -1,0 +1,124 @@
+Testimonials Section
+.testimonials {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #eef2f3, #d7dde8);
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Testimonials Carousel */
+.testimonials-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Quote Icon */
+.testimonial-card::before {
+    content: "“";
+    font-size: 4rem;
+    color: #3b82f6;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: 0.2;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+/* Testimonial Quote */
+.testimonial-quote {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+}
+
+/* Author Details */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3b82f6;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-name {
+    font-size: 1.3rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.testimonial-role {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial-card {
+        max-width: 90%;
+    }
+}
+

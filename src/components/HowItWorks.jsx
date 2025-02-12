@@ -1,7 +1,8 @@
-// components/HowItWorks.jsx
+
 import React from 'react';
 import { FaSearch, FaHandshake, FaChartLine } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import './HowItWorks.css';
 
 const HowItWorks = () => {
   const steps = [
