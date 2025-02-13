@@ -3,12 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+
 // Pages
 import Home from './pages/Home';
-import Skills from './pages/Skills';
-import Mentors from './pages/Mentors';
-import Communities from './pages/Communities';
-import AuthPage from './pages/AuthPage';
+
+
+
+import Skills from './Pages/Skills';
+import Mentors from './Pages/Mentors';
+import Communities from './Pages/Communities';
+import AuthPage from './Pages/AuthPage';
+
 
 import './index.css';
 
