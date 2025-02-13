@@ -15,10 +15,9 @@ const HeroSection = () => {
         <p className="subheading">
           Unlock your potential with LearningNest—find skills, mentors, and communities that inspire growth.
         </p>
-        <div className="search-bar">
-          <input type="text" placeholder="Find skills or mentors" />
+        
           <button className="cta-button">Get Started</button>
-        </div>
+       
         <div className="hero-stats">
           <div className="stat">
             <h2>10,000+</h2>

@@ -21,6 +21,7 @@
   color: var(--text-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: var(--font-family);
+  position: relative; /* Ensure the navbar is positioned correctly */
 }
 
 /* Logo */
@@ -52,6 +53,11 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.nav-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -61,11 +67,6 @@
   bottom: -5px;
   left: 0;
   transition: width 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--primary-color);
-  transform: translateY(-3px);
 }
 
 .nav-links a:hover::after {
@@ -107,29 +108,30 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
-    position: absolute;
-    top: 60px;
+    position: fixed; /* Use fixed positioning for full-screen overlay */
+    top: 60px; /* Adjust based on your navbar height */
     right: 0;
     flex-direction: column;
     background: var(--background-color);
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px); /* Full height minus navbar height */
     align-items: center;
     justify-content: center;
-    transform: translateX(100%);
+    transform: translateX(100%); /* Hide the menu off-screen by default */
     transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Ensure the menu is above other content */
   }
 
   .nav-links.active {
-    transform: translateX(0);
+    transform: translateX(0); /* Show the menu when active */
   }
 
   .mobile-menu-icon {
-    display: block;
+    display: block; /* Show the mobile menu icon */
   }
 
   .cta-button {
-    display: none;
+    display: none; /* Hide the CTA button on mobile */
   }
 }
 
