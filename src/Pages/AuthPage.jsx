@@ -1,78 +1,123 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './AuthPage.css'; // Import CSS for styling
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./AuthPage.css"; // Import styles
 
 const AuthPage = () => {
-  const [isLogin, setIsLogin] = useState(true); // Toggle between Login and Signup
+  const [isLogin, setIsLogin] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const toggleForm = () => {
+    setIsLogin(!isLogin);
+    setError(""); // Clear error when switching
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
+
+    const userData = { email, password };
+    if (!isLogin) userData.name = name; // Add name only for signup
+
+    try {
+      const endpoint = isLogin ? "/auth/login" : "/auth/register";
+      const response = await axios.post(`http://localhost:8000${endpoint}`, userData);
+
+      if (isLogin) {
+        localStorage.setItem("jwtToken", response.data.jwtToken); // Store token
+        alert("Login successful!");
+
+        // Role-based navigation
+        if (response.data.role === "admin") {
+          navigate("/admin");
+        } else {
+          navigate("/dashboard");
+        }
+      } else {
+        alert("Signup successful! Please login.");
+        setIsLogin(true); // Switch to login after signup
+      }
+    } catch (err) {
+      console.error(err);
+      setError(err.response?.data?.message || "An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="auth-page">
-      <div className="auth-container">
-        <h1>Welcome to LearningNest</h1>
-        <p>Unlock your potential by joining as a Mentor or Student.</p>
-
-        {/* Toggle between Login and Signup */}
-        <div className="auth-toggle">
-          <button
-            className={isLogin ? 'active' : ''}
-            onClick={() => setIsLogin(true)}
-          >
-            Log In
+      <div className="form-container">
+        <div className="form-toggle">
+          <button className={`toggle-button ${isLogin ? "active" : ""}`} onClick={toggleForm} disabled={isLoading}>
+            Login
           </button>
-          <button
-            className={!isLogin ? 'active' : ''}
-            onClick={() => setIsLogin(false)}
-          >
+          <button className={`toggle-button ${!isLogin ? "active" : ""}`} onClick={toggleForm} disabled={isLoading}>
             Sign Up
           </button>
         </div>
+        <form onSubmit={handleSubmit} className="auth-form">
+          <h2>{isLogin ? "Login" : "Sign Up"}</h2>
+          {error && <div className="error-message">{error}</div>}
 
-        {/* Form for Login or Signup */}
-        <form className="auth-form">
           {!isLogin && (
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" placeholder="Enter your full name" required />
+              <input
+                id="name"
+                type="text"
+                placeholder="Full Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                disabled={isLoading}
+              />
             </div>
           )}
+
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required />
+            <input
+              id="email"
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={isLoading}
+            />
           </div>
+
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" required />
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              disabled={isLoading}
+            />
           </div>
-          {!isLogin && (
-            <div className="form-group">
-              <label htmlFor="role">Role</label>
-              <select id="role" required>
-                <option value="">Select your role</option>
-                <option value="mentor">Mentor</option>
-                <option value="student">Student</option>
-              </select>
+
+          <button type="submit" className="submit-button" disabled={isLoading}>
+            {isLoading ? "Loading..." : isLogin ? "Login" : "Sign Up"}
+          </button>
+          
+          {/* Login as Admin link */}
+          {isLogin && !isLoading && (
+            <div className="admin-login">
+              <p>Login as <a href="/adminlogin">Admin</a></p>
             </div>
           )}
-          <button type="submit" className="auth-submit-button">
-            {isLogin ? 'Log In' : 'Sign Up'}
-          </button>
         </form>
-
-        {/* Additional Links */}
-        <div className="auth-links">
-          {isLogin ? (
-            <p>
-              Don't have an account?{' '}
-              <span onClick={() => setIsLogin(false)}>Sign Up</span>
-            </p>
-          ) : (
-            <p>
-              Already have an account?{' '}
-              <span onClick={() => setIsLogin(true)}>Log In</span>
-            </p>
-          )}
-          <Link to="/forgot-password">Forgot Password?</Link>
-        </div>
       </div>
     </div>
   );

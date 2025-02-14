@@ -15,6 +15,12 @@ import Communities from './Pages/Communities';
 import AuthPage from './Pages/AuthPage';
 
 
+
+
+import ProfilePage from './Pages/ProfilePage';
+import AdminPage from './Pages/AdminPage';
+import AdminLoginPage from './Pages/AdminLogin';
+
 import './index.css';
 
 function App() {
@@ -28,6 +34,11 @@ function App() {
           <Route path="/mentors" element={<Mentors />} />
           <Route path="/communities" element={<Communities />} />
           <Route path="/auth" element={<AuthPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/adminlogin" element={<AdminLoginPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        
         </Routes>
         <Footer />
       </div>
