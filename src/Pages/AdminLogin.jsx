@@ -2,23 +2,53 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AuthPage.css"; // Import styles
 
-const AdminLoginPage = () => {
+const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
 
-    // Simulate login success and immediately navigate to AdminPage
-    setTimeout(() => {
-      navigate("/admin");  // Navigate to the admin dashboard
+    // Basic validation
+    if (!email || !password) {
+      setError("Please fill in all fields.");
       setIsLoading(false);
-    }, 1000); // Simulate a delay for the login process
+      return;
+    }
+
+    // Simulate API call
+    try {
+      const response = await fakeLoginApi(email, password);
+
+      if (response.success) {
+        localStorage.setItem("token", response.token); // Store token in localStorage
+        navigate("/admin"); // Navigate to the admin dashboard
+      } else {
+        setError("Invalid email or password.");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Simulate a fake login API
+  const fakeLoginApi = (email, password) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === "admin@example.com" && password === "password123") {
+          resolve({ success: true, token: "fake-jwt-token" }); // Simulate token
+        } else {
+          resolve({ success: false });
+        }
+      }, 1000); // Simulate network delay
+    });
   };
 
   return (
@@ -65,4 +95,4 @@ const AdminLoginPage = () => {
   );
 };
 
-export default AdminLoginPage;
+export default AdminLogin;

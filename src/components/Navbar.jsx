@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 import { FaBars, FaTimes } from 'react-icons/fa'; // Icons for mobile menu
 import './Navbar.css'; // Import CSS for styling
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation(); // Get the current location
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -13,6 +14,9 @@ const Navbar = () => {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  // Check if the current route is the AdminPage
+  const isAdminPage = location.pathname === '/admin';
 
   return (
     <nav className="navbar">
@@ -47,10 +51,12 @@ const Navbar = () => {
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      {/* Call-to-Action Button */}
-      <Link to="/auth" className="cta-button" onClick={closeMobileMenu}>
-        Get Started
-      </Link>
+      {/* Conditionally render the "Get Started" button */}
+      {!isAdminPage && (
+        <Link to="/auth" className="cta-button" onClick={closeMobileMenu}>
+          Get Started
+        </Link>
+      )}
     </nav>
   );
 };
