@@ -1,0 +1,143 @@
+/* General Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  /* Header */
+  .head {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #00aaff, #0088cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  
+  /* Buttons */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .back-button, .enroll-button {
+    font-size: 16px;
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  
+  .back-button {
+    background: #0088cc;
+    color: white;
+  }
+  
+  .enroll-button {
+    background: #00c6ff;
+    color: white;
+  }
+  
+  .back-button:hover {
+    background: #0077b6;
+  }
+  
+  .enroll-button:hover {
+    background: #00a4ff;
+  }
+  
+  /* Description Section */
+  .description {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 174, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 174, 255, 0.2);
+  }
+  
+  .description h2 {
+    font-size: 1.8rem;
+    color: #0088cc;
+  }
+  
+  .description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Image Gallery */
+  .image-gallery-container {
+    margin: 30px 0;
+  }
+  
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .image-gallery img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    border: 3px solid #00c6ff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  }
+  
+  .image-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 174, 255, 0.4);
+  }
+  
+  /* Course Inclusions */
+  .course-inclusions {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(0, 174, 255, 0.1);
+    border-radius: 15px;
+    text-align: left;
+  }
+  
+  .course-inclusions h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #0077b6;
+  }
+  
+  .course-inclusions ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .course-inclusions li {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+  }
+  
+  .course-inclusions li::before {
+    content: "✔️";
+    font-size: 1.2rem;
+    color: #00aaff;
+  }
+  

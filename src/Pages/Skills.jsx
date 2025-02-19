@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaCode, FaChartBar, FaPaintBrush, FaShieldAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import './Skills.css';
 
 // Placeholder image for skills without images
@@ -15,6 +16,7 @@ export const SkillsData = [
         title: 'Web Development',
         image: placeholderImage,
         description: 'Learn to build modern websites and web applications.',
+        path: '/webdevelopment', // Path for navigation
       },
       {
         title: 'Mobile App Development',
@@ -162,7 +164,7 @@ const SkillCard = ({ skill }) => {
     >
       <div className="skill-image-wrapper">
         <img
-          src={skill.image || placeholderImage} // Fallback to placeholder if no image is provided
+          src={skill.image || placeholderImage}
           alt={skill.title}
           className="skill-image"
         />
@@ -170,7 +172,10 @@ const SkillCard = ({ skill }) => {
       <div className="skill-content">
         <h3 className="skill-title">{skill.title}</h3>
         <p className="skill-description">{skill.description}</p>
-        <button className="skill-button">Start Learning</button>
+        {/* Use Link for navigation */}
+        <Link to={skill.path || '#'} className="skill-button">
+          Start Learning
+        </Link>
       </div>
     </motion.div>
   );
@@ -205,4 +210,5 @@ const Skills = () => {
     </section>
   );
 };
+
 export default Skills;

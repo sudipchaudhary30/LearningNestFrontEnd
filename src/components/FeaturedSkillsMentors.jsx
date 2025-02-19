@@ -27,7 +27,7 @@ const FeaturedSkillsMentors = () => {
 
   return (
     <section className="featured-skills">
-      <h2 className="section-title">Featured Skills & Mentors</h2>
+      <h2 className="section-title">Featured Skills</h2>
       <div className="skills-grid">
         {skills.map((skill, index) => (
           <div key={index} className="skill-card">

@@ -20,8 +20,10 @@ import AuthPage from './Pages/AuthPage';
 import ProfilePage from './Pages/ProfilePage';
 import AdminPage from './Pages/AdminPage';
 import AdminLoginPage from './Pages/AdminLogin';
+import WebDevelopmentCourse from './Courses/WebDevelopment';
 
 import './index.css';
+import Dashboard from './Pages/Dashboard';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/adminlogin" element={<AdminLoginPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/webdevelopment" element={<WebDevelopmentCourse/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         
         </Routes>
         <Footer />

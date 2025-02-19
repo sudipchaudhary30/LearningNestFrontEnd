@@ -25,11 +25,9 @@
 }
 
 /* Logo */
-.logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  animation: fadeIn 1s ease-in-out;
+.logo img {
+  width: 150px; /* Adjusted logo size */
+  height: auto;
 }
 
 /* Navigation Links */
