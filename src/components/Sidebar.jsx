@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/images/LearningNestNewLogo.png'; // Ensure the path is correct
-import './Sidebar.css'; // Create a CSS file for styling the sidebar
+import './Sidebar.css'; // Sidebar styling
 
-const Sidebar = () => {
+const Sidebar = ({ setActiveSection }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const location = useLocation();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -15,8 +13,6 @@ const Sidebar = () => {
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
-
-  const isAdminPage = location.pathname === '/admin';
 
   return (
     <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
@@ -33,25 +29,29 @@ const Sidebar = () => {
       {/* Sidebar Links */}
       <ul className="sidebar-links">
         <li>
-          <Link to="/" onClick={closeSidebar}>Home</Link>
+          <button onClick={() => { setActiveSection('home'); closeSidebar(); }}>Dashboard</button>
         </li>
         <li>
-          <Link to="/skills" onClick={closeSidebar}>Explore Skills</Link>
+          <button onClick={() => { setActiveSection('courses'); closeSidebar(); }}>Courses</button>
         </li>
         <li>
-          <Link to="/mentors" onClick={closeSidebar}>Mentors</Link>
+          <button onClick={() => { setActiveSection('progress'); closeSidebar(); }}>Progress</button>
         </li>
         <li>
-          <Link to="/communities" onClick={closeSidebar}>Communities</Link>
+          <button onClick={() => { setActiveSection('mentors'); closeSidebar(); }}>Mentors</button>
+        </li>
+        <li>
+          <button onClick={() => { setActiveSection('settings'); closeSidebar(); }}>Settings</button>
         </li>
       </ul>
 
-      {/* Conditionally show "Get Started" button */}
-      {!isAdminPage && (
-        <Link to="/auth" className="sidebar-cta-button" onClick={closeSidebar}>
-          Get Started
-        </Link>
-      )}
+      {/* Logout Button */}
+      <button className="sidebar-logout-button" onClick={() => {
+        // Handle logout logic here
+        closeSidebar();
+      }}>
+        Logout
+      </button>
     </div>
   );
 };
