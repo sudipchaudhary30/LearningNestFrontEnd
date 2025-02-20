@@ -5,9 +5,7 @@ import Footer from './components/Footer';
 
 
 // Pages
-import Home from './pages/Home';
-
-
+import Home from './Pages/Home'
 
 import Skills from './Pages/Skills';
 import Mentors from './Pages/Mentors';
@@ -24,6 +22,7 @@ import WebDevelopmentCourse from './Courses/WebDevelopment';
 
 import './index.css';
 import Dashboard from './Pages/Dashboard';
+import ForgotPasswordPage from './Pages/ForgotPasswordPage';
 
 function App() {
   return (
@@ -42,6 +41,7 @@ function App() {
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/webdevelopment" element={<WebDevelopmentCourse/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         
         </Routes>
        

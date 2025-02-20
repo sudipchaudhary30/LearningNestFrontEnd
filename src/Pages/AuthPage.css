@@ -3,110 +3,111 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(-45deg, #568bdc, #3ccbe7, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background-image: url("LearningNest\src\assets\Images\background.jpg"), linear-gradient(-45deg, #568bdc, #3ccbe7, #23a6d5, #23d5ab); /* Add both the image and gradient */
+  background-size: cover, 400% 400%; /* Ensure the image covers the container and gradient is sized */
+  background-position: center, center; /* Position both the image and gradient */
   animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .form-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .form-toggle {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-  }
-  
-  .toggle-button {
-    flex: 1;
-    padding: 0.75rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #666;
-    transition: all 0.3s ease;
-  }
-  
-  .toggle-button.active {
-    color: #000;
-    font-weight: bold;
-    border-bottom: 2px solid #007bff;
-  }
-  
-  .toggle-button:disabled {
-    cursor: not-allowed;
-    opacity: 0.7;
-  }
-  
-  .auth-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .auth-form h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .submit-button {
-    padding: 0.75rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .submit-button:hover:not(:disabled) {
-    background-color: #0056b3;
-  }
-  
-  .error-message {
-    color: #dc3545;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+}
+
+.toggle-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  text-align: center;
+}

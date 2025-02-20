@@ -1,72 +1,100 @@
+/* Sidebar.css */
+
+/* Sidebar Container */
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #0c66c1;
     position: fixed;
     top: 0;
-    left: -250px;
-    transition: left 0.3s ease;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #1e293b; /* Dark blue-gray */
+    color: #030d72;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   }
   
   .sidebar.open {
-    left: 0;
+    transform: translateX(0);
   }
   
+  /* Sidebar Toggle Button */
   .sidebar-toggle {
     position: absolute;
-    top: 20px;
-    right: -50px;
-    background-color: #2c3e50;
-    color: white;
+    top: 15px;
+    left: 260px;
+    background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    padding: 10px;
+    color: #2530ca;
   }
   
+  /* Logo */
   .sidebar-logo img {
-    width: 100px;
-    margin-bottom: 20px;
-    cursor: pointer;
+    width: 150px;
+    margin-bottom: 30px;
   }
   
+  /* Sidebar Links */
   .sidebar-links {
     list-style: none;
     padding: 0;
     width: 100%;
+    margin-top: 30px; /* Moves menu items slightly higher */
   }
   
   .sidebar-links li {
-    margin: 15px 0;
+    width: 100%;
   }
   
-  .sidebar-links a {
-    color: white;
-    text-decoration: none;
+  .sidebar-links button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #ffffff;
     font-size: 18px;
-    display: block;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
   }
   
-  .sidebar-links a:hover {
-    background-color: #34495e;
+  .sidebar-links button:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
   
-  .sidebar-cta-button {
-    background-color: #e67e22;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+  /* Logout Button */
+  .sidebar-logout {
+    margin-top: auto; /* Pushes the logout button to the bottom */
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
   }
   
-  .sidebar-cta-button:hover {
-    background-color: #d35400;
+  .sidebar-logout button {
+    background: none;
+    border: none;
+    color: #ff6b6b; /* Red shade for logout */
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
   }
+  
+  .sidebar-logout button:hover {
+    color: #ff3b3b;
+  }
+  
