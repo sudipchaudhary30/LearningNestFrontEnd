@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Communities.css';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 const communityList = [
   { name: 'Web Development', members: '12K Members' },
@@ -18,6 +20,8 @@ const Communities = () => {
   );
 
   return (
+    <>
+    <Navbar />
     <div className="communities-container">
       <h1>Explore Learning Communities</h1>
       <p>Join a community of learners to share knowledge and collaborate!</p>
@@ -42,6 +46,8 @@ const Communities = () => {
         ))}
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

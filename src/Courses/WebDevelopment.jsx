@@ -6,6 +6,8 @@ import jsImage from '../assets/Images/javascript.png';
 import reactImage from '../assets/Images/react.jpg';
 import nodeImage from '../assets/Images/nodejs.jpg';
 import './course.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const BackButton = () => {
   const navigate = useNavigate();
@@ -33,6 +35,7 @@ const ImageGallery = () => {
 
 const CourseInclusions = () => {
   return (
+  
     <div className="course-inclusions">
       <h3>Web Development Course Includes:</h3>
       <ul>
@@ -49,6 +52,8 @@ const CourseInclusions = () => {
 
 const WebDevelopmentCourse = () => {
   return (
+    <>
+    <Navbar />
     <div className="container">
       <div className="button-container">
         <BackButton />
@@ -68,6 +73,8 @@ const WebDevelopmentCourse = () => {
       <ImageGallery />
       <CourseInclusions />
     </div>
+    <Footer />
+    </>
   );
 };
 

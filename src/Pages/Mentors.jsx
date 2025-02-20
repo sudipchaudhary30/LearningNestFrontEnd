@@ -5,6 +5,8 @@ import './Mentors.css';
 
 // Placeholder image for mentors without images
 import placeholderImage from '../assets/Images/mentor-image.jpg';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export const MentorsData = [
   {
@@ -107,6 +109,8 @@ export const MentorsData = [
 
 const MentorCard = ({ mentor }) => {
   return (
+  
+     
     <motion.div
       className="mentor-card"
       whileHover={{ scale: 1.05 }}
@@ -126,11 +130,14 @@ const MentorCard = ({ mentor }) => {
         <button className="mentor-button">Contact Mentor</button>
       </div>
     </motion.div>
+  
   );
 };
 
 const Mentors = () => {
   return (
+    <>
+    <Navbar />
     <section className="mentors-page">
       <div className="mentors-container">
         <h2 className="mentors-title">Meet Our Mentors</h2>
@@ -156,6 +163,8 @@ const Mentors = () => {
         ))}
       </div>
     </section>
+    <Footer />
+    </>
   );
 };
 

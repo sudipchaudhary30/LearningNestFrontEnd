@@ -6,6 +6,8 @@ import './Skills.css';
 
 // Placeholder image for skills without images
 import placeholderImage from '../assets/Images/education-image.png';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 export const SkillsData = [
   {
@@ -183,6 +185,8 @@ const SkillCard = ({ skill }) => {
 
 const Skills = () => {
   return (
+    <>
+     <Navbar />
     <section className="skills-page">
       <div className="skills-container">
         <h2 className="skills-title">Explore Skills</h2>
@@ -208,6 +212,8 @@ const Skills = () => {
         ))}
       </div>
     </section>
+    <Footer />
+    </>
   );
 };
 

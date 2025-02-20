@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AuthPage.css"; // Import styles
+import Navbar from "../components/Navbar";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -52,6 +53,8 @@ const AdminLogin = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="auth-page">
       <div className="form-container">
         <h2>Admin Login</h2>
@@ -92,6 +95,7 @@ const AdminLogin = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
