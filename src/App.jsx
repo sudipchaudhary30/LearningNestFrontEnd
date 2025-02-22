@@ -23,9 +23,12 @@ import WebDevelopmentCourse from './Courses/WebDevelopment';
 import './index.css';
 import Dashboard from './Pages/Dashboard';
 import ForgotPasswordPage from './Pages/ForgotPasswordPage';
-import CommunitiesLogin from './Pages/AfterLogin/CommunitiesLogin';
-import MentorsLogin from './Pages/AfterLogin/MentorsLogin';
-import SkillsLogin from './Pages/AfterLogin/SkillsLogin';
+
+
+// import CommunitiesLogin from './Pages/AfterLogin/CommunitiesLogin';
+// import MentorsLogin from './Pages/AfterLogin/MentorsLogin';
+// import SkillsLogin from './Pages/AfterLogin/SkillsLogin';
+
 
 function App() {
   return (

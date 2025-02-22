@@ -4,9 +4,33 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './Skills.css';
 
-// Placeholder image for skills without images
+// Placeholder image for skills with images
 import placeholderImage from '../assets/Images/education-image.png';
 import webdeveloper from '../assets/Images/Skills/webdevelopment.png';
+import mobileapp from '../assets/Images/Skills/mobileappdevelopment.png';
+import Backend from '../assets/Images/Skills/Backend-Development.webp';
+import DevOps from '../assets/Images/Skills/DevOps.png';
+import Frontend from '../assets/Images/Skills/frontend.png';
+import game from '../assets/Images/Skills/game.jpg';
+import dataai from '../assets/Images/Skills/DataScience.jpg';
+import Artificial from '../assets/Images/Skills/ArtificialIntelligence.webp';
+import BigData from '../assets/Images/Skills/BigData.jpg';
+import DataVisualization from '../assets/Images/Skills/DataVisualization.jpg';
+import MachineLearning from '../assets/Images/Skills/MachineLearning.jpg';
+import NaturalLanguageProcessing from '../assets/Images/Skills/NaturalLanguageProcessing.png';
+import Graphic from '../assets/Images/Skills/GraphicDesign.webp';
+import UI from '../assets/Images/Skills/UIUXDesign.png';
+import Web from '../assets/Images/Skills/WebDesign.webp';
+import Motion from '../assets/Images/Skills/MachineLearning.jpg';
+import Branding from '../assets/Images/Skills/Branding.jpeg';
+import D from '../assets/Images/Skills/3DDesign.webp';
+import Cybersecurity from '../assets/Images/Skills/Cybersecurity.jpg';
+import Ethical  from '../assets/Images/Skills/EthicalHacking.webp';
+import Network from '../assets/Images/Skills/NetworkSecurity.webp';
+import Cloud from '../assets/Images/Skills/CloudSecurity.jpeg';
+import Cryptography from '../assets/Images/Skills/Cryptography.webp';
+import Digital from '../assets/Images/Skills/DigitalForensics.webp';
+
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -23,27 +47,27 @@ export const SkillsData = [
       },
       {
         title: 'Mobile App Development',
-        image: placeholderImage,
+        image: mobileapp,
         description: 'Create cross-platform mobile apps with React Native or Flutter.',
       },
       {
         title: 'Backend Development',
-        image: placeholderImage,
+        image: Backend,
         description: 'Master server-side programming with Node.js, Django, or Spring Boot.',
       },
       {
         title: 'Frontend Development',
-        image: placeholderImage,
+        image: Frontend,
         description: 'Build responsive and interactive user interfaces with React or Angular.',
       },
       {
         title: 'DevOps',
-        image: placeholderImage,
+        image: DevOps,
         description: 'Learn CI/CD, Docker, Kubernetes, and cloud deployment.',
       },
       {
         title: 'Game Development',
-        image: placeholderImage,
+        image: game,
         description: 'Create games using Unity, Unreal Engine, or Godot.',
       },
     ],
@@ -54,32 +78,32 @@ export const SkillsData = [
     skills: [
       {
         title: 'Data Science',
-        image: placeholderImage,
+        image: dataai,
         description: 'Master data analysis, machine learning, and AI.',
       },
       {
         title: 'Artificial Intelligence',
-        image: placeholderImage,
+        image: Artificial,
         description: 'Explore deep learning, NLP, and intelligent systems.',
       },
       {
         title: 'Big Data',
-        image: placeholderImage,
+        image: BigData,
         description: 'Work with Hadoop, Spark, and large-scale data processing.',
       },
       {
         title: 'Data Visualization',
-        image: placeholderImage,
+        image: DataVisualization,
         description: 'Create stunning visualizations with tools like Tableau and D3.js.',
       },
       {
         title: 'Machine Learning',
-        image: placeholderImage,
+        image: MachineLearning,
         description: 'Build predictive models using TensorFlow and Scikit-learn.',
       },
       {
         title: 'Natural Language Processing',
-        image: placeholderImage,
+        image: NaturalLanguageProcessing,
         description: 'Learn text analysis, sentiment analysis, and chatbots.',
       },
     ],
@@ -90,32 +114,32 @@ export const SkillsData = [
     skills: [
       {
         title: 'Graphic Design',
-        image: placeholderImage,
+        image: Graphic,
         description: 'Create stunning visuals and professional designs.',
       },
       {
         title: 'UI/UX Design',
-        image: placeholderImage,
+        image: UI,
         description: 'Design user-friendly interfaces and experiences.',
       },
       {
         title: 'Web Design',
-        image: placeholderImage,
+        image: Web,
         description: 'Create beautiful and responsive websites.',
       },
       {
         title: 'Motion Graphics',
-        image: placeholderImage,
+        image: Motion,
         description: 'Design animations and motion graphics for videos.',
       },
       {
         title: 'Branding',
-        image: placeholderImage,
+        image: Branding,
         description: 'Develop brand identities and marketing materials.',
       },
       {
         title: '3D Design',
-        image: placeholderImage,
+        image: D,
         description: 'Create 3D models and animations using Blender or Maya.',
       },
     ],
@@ -126,32 +150,32 @@ export const SkillsData = [
     skills: [
       {
         title: 'Cybersecurity',
-        image: placeholderImage,
+        image: Cybersecurity,
         description: 'Learn how to protect systems and data from cyber threats.',
       },
       {
         title: 'Ethical Hacking',
-        image: placeholderImage,
+        image: Ethical,
         description: 'Master penetration testing and vulnerability assessment.',
       },
       {
         title: 'Network Security',
-        image: placeholderImage,
+        image: Network,
         description: 'Secure networks and prevent unauthorized access.',
       },
       {
         title: 'Cloud Security',
-        image: placeholderImage,
+        image: Cloud,
         description: 'Protect cloud infrastructure and applications.',
       },
       {
         title: 'Cryptography',
-        image: placeholderImage,
+        image: Cryptography,
         description: 'Learn encryption techniques and secure communication.',
       },
       {
         title: 'Digital Forensics',
-        image: placeholderImage,
+        image: Digital,
         description: 'Investigate cybercrimes and recover digital evidence.',
       },
     ],

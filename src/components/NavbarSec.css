@@ -1,15 +1,7 @@
 /* Navbar.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* Global Styles */
-:root {
-  --primary-color: #4a90e2; /* Soft blue */
-  --secondary-color: #ff6b6b; /* Coral */
-  --text-color: #333333; /* Dark gray */
-  --background-color: #ffffff; /* White */
-  --hover-color: #ff4757; /* Darker coral */
-  --font-family: 'Poppins', sans-serif;
-}
+
 
 /* Navbar Container */
 .navbar {
