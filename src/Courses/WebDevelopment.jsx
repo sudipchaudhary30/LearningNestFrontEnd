@@ -8,6 +8,7 @@ import nodeImage from '../assets/Images/nodejs.jpg';
 import './course.css';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import NavbarSec from "../components/NavbarSec";
 
 const BackButton = () => {
   const navigate = useNavigate();
@@ -53,12 +54,12 @@ const CourseInclusions = () => {
 const WebDevelopmentCourse = () => {
   return (
     <>
-    <Navbar />
+    <NavbarSec />
     <div className="container">
       <div className="button-container">
         <BackButton />
         <h1 className="head">Web Development Mastery Course</h1>
-        <EnrollButton />
+        
       </div>
 
       <div className="description">
