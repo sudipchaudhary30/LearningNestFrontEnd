@@ -15,9 +15,9 @@ import Logo from '../assets/images/LearningNestNewLogo.png'; // Ensure correct p
 import './Sidebar.css';
 
 const menuItems = [
-  { id: 'home', label: 'Dashboard', icon: <FaHome /> },
+  // { id: 'home', label: 'Dashboard', icon: <FaHome /> },
   { id: 'courses', label: 'Courses', icon: <FaBook /> },
-  { id: 'progress', label: 'Progress', icon: <FaChartLine /> },
+  // { id: 'progress', label: 'Progress', icon: <FaChartLine /> },
   { id: 'mentors', label: 'Mentors', icon: <FaUser /> },
   { id: 'profile', label: 'Profile', icon: <FaUserCircle /> },
 ];

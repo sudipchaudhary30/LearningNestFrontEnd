@@ -6,6 +6,7 @@ import './Skills.css';
 
 // Placeholder image for skills without images
 import placeholderImage from '../assets/Images/education-image.png';
+import webdeveloper from '../assets/Images/Skills/webdevelopment.png';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -16,7 +17,7 @@ export const SkillsData = [
     skills: [
       {
         title: 'Web Development',
-        image: placeholderImage,
+        image: webdeveloper,
         description: 'Learn to build modern websites and web applications.',
         path: '/webdevelopment', // Path for navigation
       },

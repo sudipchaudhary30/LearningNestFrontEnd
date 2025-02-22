@@ -23,6 +23,9 @@ import WebDevelopmentCourse from './Courses/WebDevelopment';
 import './index.css';
 import Dashboard from './Pages/Dashboard';
 import ForgotPasswordPage from './Pages/ForgotPasswordPage';
+import CommunitiesLogin from './Pages/AfterLogin/CommunitiesLogin';
+import MentorsLogin from './Pages/AfterLogin/MentorsLogin';
+import SkillsLogin from './Pages/AfterLogin/SkillsLogin';
 
 function App() {
   return (
@@ -42,6 +45,9 @@ function App() {
         <Route path="/webdevelopment" element={<WebDevelopmentCourse/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        {/* <Route path="/communitieslogin" element={<CommunitiesLogin />} />
+        <Route path="/mentorslogin" element={<MentorsLogin />} />
+        <Route path="/skillsLogin" element={<SkillsLogin />} /> */}
         
         </Routes>
        

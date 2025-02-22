@@ -1,0 +1,172 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Global Styles */
+:root {
+  --primary-color: #4a90e2; /* Soft blue */
+  --secondary-color: #ff6b6b; /* Coral */
+  --text-color: #333333; /* Dark gray */
+  --background-color: #ffffff; /* White */
+  --hover-color: #ff4757; /* Darker coral */
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-family);
+  position: relative; /* Ensure the navbar is positioned correctly */
+}
+
+/* Logo */
+.logo img {
+  width: 150px; /* Adjusted logo size */
+  height: auto;
+  cursor: pointer; /* Make the logo clickable */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem; /* Reduced gap for better spacing */
+  margin: auto;
+  padding: auto;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-icon:hover {
+  color: var(--primary-color);
+}
+
+/* CTA Button */
+.cta-button {
+  background: var(--secondary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none; /* Remove underline from the button */
+}
+
+.cta-button:hover {
+  background: var(--hover-color);
+  transform: translateY(-3px);
+}
+
+/* Profile Picture */
+.profile-picture {
+  cursor: pointer;
+  margin-left: auto; /* Push the profile picture to the right */
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed; /* Use fixed positioning for full-screen overlay */
+    top: 60px; /* Adjust based on your navbar height */
+    right: 0;
+    flex-direction: column;
+    background: var(--background-color);
+    width: 100%;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%); /* Hide the menu off-screen by default */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Ensure the menu is above other content */
+  }
+
+  .nav-links.active {
+    transform: translateX(0); /* Show the menu when active */
+  }
+
+  .mobile-menu-icon {
+    display: block; /* Show the mobile menu icon */
+  }
+
+  .cta-button {
+    display: none; /* Hide the CTA button on mobile */
+  }
+
+  .profile-picture {
+    display: none; /* Hide the profile picture on mobile */
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

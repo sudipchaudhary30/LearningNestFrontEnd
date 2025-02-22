@@ -5,6 +5,7 @@ import './Mentors.css';
 
 // Placeholder image for mentors without images
 import placeholderImage from '../assets/Images/mentor-image.jpg';
+import Jane from '../assets/Images/one.jpeg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -14,14 +15,14 @@ export const MentorsData = [
     icon: <FaCode className="mentor-icon" />,
     mentors: [
       {
-        name: 'John Doe',
+        name: 'Joe Doe',
         image: placeholderImage,
         expertise: 'Web Development',
         description: '10+ years of experience in building modern websites and web applications.',
       },
       {
         name: 'Jane Smith',
-        image: placeholderImage,
+        image: Jane,
         expertise: 'Mobile App Development',
         description: 'Expert in creating cross-platform mobile apps with React Native and Flutter.',
       },
