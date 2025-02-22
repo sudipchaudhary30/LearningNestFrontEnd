@@ -27,7 +27,7 @@ const NavbarSec = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbarlog">
       {/* Logo Section - Click to Navigate to Home */}
       <div className="logo" onClick={handleLogoClick}>
         <img src={Logo} alt="LearningNest Logo" className="navbar-logo" />
@@ -36,9 +36,9 @@ const NavbarSec = () => {
       {/* Desktop Menu */}
       <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
         
-        <li><Link to="/skills" onClick={closeMobileMenu}>Explore Skills</Link></li>
-        <li><Link to="/mentors" onClick={closeMobileMenu}>Mentors</Link></li>
-        <li><Link to="/communities" onClick={closeMobileMenu}>Communities</Link></li>
+        <li><Link to="/skillsLogin" onClick={closeMobileMenu}>Explore Skills</Link></li>
+        <li><Link to="/mentorslogin" onClick={closeMobileMenu}>Mentors</Link></li>
+        <li><Link to="/communitieslogin" onClick={closeMobileMenu}>Communities</Link></li>
       </ul>
 
       {/* Mobile Menu Toggle */}

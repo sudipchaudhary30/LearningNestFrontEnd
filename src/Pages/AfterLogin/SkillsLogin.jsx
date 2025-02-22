@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCode, FaChartBar, FaPaintBrush, FaShieldAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Import Link for navigation
-import './SkillsLog.css';
+import '../Skills.css';
 
 // Placeholder image for skills with images
 // import placeholderImage from '../assets/Images/education-image.png';

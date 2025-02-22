@@ -1,7 +1,7 @@
 
 
 import React, { useState } from 'react';
-import './CommunitiesLog.css';
+import '../Communities.css';
 import Footer from '../../components/Footer';
 import NavbarSec from '../../components/NavbarSec';
 
