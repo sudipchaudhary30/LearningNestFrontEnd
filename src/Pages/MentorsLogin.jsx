@@ -4,22 +4,23 @@ import { motion } from 'framer-motion';
 import './MentorsLog.css';
 
 // Placeholder image for mentors without images
-import placeholderImage from '../../assets/Images/mentor-image.jpg';
+// import placeholderImage from '../assets/Images/mentor-image.jpg';
 
-import Jane from '../../assets/Images/one.jpeg';
-import Mentor3 from '../../assets/Images/Mentor/Mentor3.jpg';
-import Mentor4 from '../../assets/Images/Mentor/Mentor4.jpg';
-import Mentor5 from '../../assets/Images/Mentor/Mentor5.jpg';
-import Mentor6 from '../../assets/Images/Mentor/Mentor6.webp';
-import Mentor7 from '../../assets/Images/Mentor/Mentor7.webp';
-import Mentor8 from '../../assets/Images/Mentor/Mentor8.jpg';
-import Mentor9 from '../../assets/Images/Mentor/Mentor9.jpg';
-import Mentor10 from '../../assets/Images/Mentor/Mentor10.jpg';
-import Mentor11 from '../../assets/Images/Mentor/Mentor11.jpg';
-import Mentor12 from '../../assets/Images/Mentor/Mentor12.jpeg';
+import placeholderImage from '.././assets/Images/mentor-image.jpg'
+import Jane from '../assets/Images/one.jpeg';
+import Mentor3 from '../assets/Images/Mentor/Mentor3.jpg';
+import Mentor4 from '../assets/Images/Mentor/Mentor4.jpg';
+import Mentor5 from '../assets/Images/Mentor/Mentor5.jpg';
+import Mentor6 from '../assets/Images/Mentor/Mentor6.webp';
+import Mentor7 from '../assets/Images/Mentor/Mentor7.webp';
+import Mentor8 from '../assets/Images/Mentor/Mentor8.jpg';
+import Mentor9 from '../assets/Images/Mentor/Mentor9.jpg';
+import Mentor10 from '../assets/Images/Mentor/Mentor10.jpg';
+import Mentor11 from '../assets/Images/Mentor/Mentor11.jpg';
+import Mentor12 from '../assets/Images/Mentor/Mentor12.jpeg';
 
 
-import Footer from '../../components/Footer';
+import Footer from '../components/Footer';
 import NavbarSec from '../../components/NavbarSec';
 
 export const MentorsData = [

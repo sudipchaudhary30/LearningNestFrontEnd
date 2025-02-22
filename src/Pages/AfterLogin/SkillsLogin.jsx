@@ -1,49 +1,40 @@
-// import React from 'react'
-
-// const SkillsLogin = () => {
-//   return (
-//     <div>SkillsLogin</div>
-//   )
-// }
-
-// export default SkillsLogin
-
-
 import React from 'react';
 import { FaCode, FaChartBar, FaPaintBrush, FaShieldAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Import Link for navigation
-import './Skills.css';
+import './SkillsLog.css';
 
 // Placeholder image for skills with images
-import placeholderImage from '../assets/Images/education-image.png';
-import webdeveloper from '../assets/Images/Skills/webdevelopment.png';
-import mobileapp from '../assets/Images/Skills/mobileappdevelopment.png';
-import Backend from '../assets/Images/Skills/Backend-Development.webp';
-import DevOps from '../assets/Images/Skills/DevOps.png';
-import Frontend from '../assets/Images/Skills/frontend.png';
-import game from '../assets/Images/Skills/game.jpg';
-import dataai from '../assets/Images/Skills/DataScience.jpg';
-import Artificial from '../assets/Images/Skills/ArtificialIntelligence.webp';
-import BigData from '../assets/Images/Skills/BigData.jpg';
-import DataVisualization from '../assets/Images/Skills/DataVisualization.jpg';
-import MachineLearning from '../assets/Images/Skills/MachineLearning.jpg';
-import NaturalLanguageProcessing from '../assets/Images/Skills/NaturalLanguageProcessing.png';
-import Graphic from '../assets/Images/Skills/GraphicDesign.webp';
-import UI from '../assets/Images/Skills/UIUXDesign.png';
-import Web from '../assets/Images/Skills/WebDesign.webp';
-import Motion from '../assets/Images/Skills/MachineLearning.jpg';
-import Branding from '../assets/Images/Skills/Branding.jpeg';
-import D from '../assets/Images/Skills/3DDesign.webp';
-import Cybersecurity from '../assets/Images/Skills/Cybersecurity.jpg';
-import Ethical  from '../assets/Images/Skills/EthicalHacking.webp';
-import Network from '../assets/Images/Skills/NetworkSecurity.webp';
-import Cloud from '../assets/Images/Skills/CloudSecurity.jpeg';
-import Cryptography from '../assets/Images/Skills/Cryptography.webp';
-import Digital from '../assets/Images/Skills/DigitalForensics.webp';
+// import placeholderImage from '../assets/Images/education-image.png';
+import placeholderImage from '../../assets/Images/education-image.png'
+import webdeveloper from '../../assets/Images/Skills/webdevelopment.png';
 
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import mobileapp from '../../assets/Images/Skills/mobileappdevelopment.png';
+import Backend from '../../assets/Images/Skills/Backend-Development.webp';
+import DevOps from '../../assets/Images/Skills/DevOps.png';
+import Frontend from '../../assets/Images/Skills/frontend.png';
+import game from '../../assets/Images/Skills/game.jpg';
+import dataai from '../../assets/Images/Skills/DataScience.jpg';
+import Artificial from '../../assets/Images/Skills/ArtificialIntelligence.webp';
+import BigData from '../../assets/Images/Skills/BigData.jpg';
+import DataVisualization from '../../assets/Images/Skills/DataVisualization.jpg';
+import MachineLearning from '../../assets/Images/Skills/MachineLearning.jpg';
+import NaturalLanguageProcessing from '../../assets/Images/Skills/NaturalLanguageProcessing.png';
+import Graphic from '../../assets/Images/Skills/GraphicDesign.webp';
+import UI from '../../assets/Images/Skills/UIUXDesign.png';
+import Web from '../../assets/Images/Skills/WebDesign.webp';
+import Motion from '../../assets/Images/Skills/MachineLearning.jpg';
+import Branding from '../../assets/Images/Skills/Branding.jpeg';
+import D from '../../assets/Images/Skills/3DDesign.webp';
+import Cybersecurity from '../../assets/Images/Skills/Cybersecurity.jpg';
+import Ethical  from '../../assets/Images/Skills/EthicalHacking.webp';
+import Network from '../../assets/Images/Skills/NetworkSecurity.webp';
+import Cloud from '../../assets/Images/Skills/CloudSecurity.jpeg';
+import Cryptography from '../../assets/Images/Skills/Cryptography.webp';
+import Digital from '../../assets/Images/Skills/DigitalForensics.webp';
+
+import Footer from '../../components/Footer';
+
 import NavbarSec from '../../components/NavbarSec';
 
 export const SkillsData = [

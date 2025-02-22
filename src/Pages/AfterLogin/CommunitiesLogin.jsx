@@ -1,9 +1,8 @@
 
 
 import React, { useState } from 'react';
-import './Communities.css';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import './CommunitiesLog.css';
+import Footer from '../../components/Footer';
 import NavbarSec from '../../components/NavbarSec';
 
 const communityList = [
