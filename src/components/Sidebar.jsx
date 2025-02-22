@@ -16,10 +16,10 @@ import './Sidebar.css';
 
 const menuItems = [
   // { id: 'home', label: 'Dashboard', icon: <FaHome /> },
-  { id: 'courses', label: 'Courses', icon: <FaBook /> },
+  { id: 'courses', label: 'Add Courses', icon: <FaBook /> },
   // { id: 'progress', label: 'Progress', icon: <FaChartLine /> },
-  { id: 'mentors', label: 'Mentors', icon: <FaUser /> },
-  { id: 'profile', label: 'Profile', icon: <FaUserCircle /> },
+  { id: 'mentors', label: 'Manage Mentors', icon: <FaUser /> },
+  // { id: 'profile', label: 'Profile', icon: <FaUserCircle /> },
 ];
 
 const Sidebar = ({ setActiveSection }) => {
@@ -32,7 +32,7 @@ const Sidebar = ({ setActiveSection }) => {
   const handleLogout = () => {
     // Clear user session (modify as per authentication method)
     localStorage.removeItem('userToken');
-    navigate('/login');
+    navigate('/');
   };
 
   return (

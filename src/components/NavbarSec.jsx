@@ -22,7 +22,7 @@ const NavbarSec = () => {
 
   // Navigate to Home when clicking the logo
   const handleLogoClick = () => {
-    navigate('/'); // Redirect to Home
+    navigate('/skillsLogin'); // Redirect to Home
     closeMobileMenu(); // Close mobile menu if open
   };
 
