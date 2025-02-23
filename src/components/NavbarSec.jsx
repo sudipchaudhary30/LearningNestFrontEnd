@@ -27,7 +27,7 @@ const NavbarSec = () => {
   };
 
   return (
-    <nav className="navbarlog">
+    <nav className="navbar">
       {/* Logo Section - Click to Navigate to Home */}
       <div className="logo" onClick={handleLogoClick}>
         <img src={Logo} alt="LearningNest Logo" className="navbar-logo" />

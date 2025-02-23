@@ -1,28 +1,15 @@
 import React, { useState } from 'react';
-import {
-  FaBars,
-  FaTimes,
-  FaHome,
-  FaBook,
-  FaChartLine,
-  FaUser,
-  FaCog,
-  FaUserCircle,
-  FaSignOutAlt,
-} from 'react-icons/fa';
+import { FaBars, FaTimes, FaBook, FaUser, FaSignOutAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/images/LearningNestNewLogo.png'; // Ensure correct path
 import './Sidebar.css';
 
 const menuItems = [
-  // { id: 'home', label: 'Dashboard', icon: <FaHome /> },
   { id: 'courses', label: 'Add Courses', icon: <FaBook /> },
-  // { id: 'progress', label: 'Progress', icon: <FaChartLine /> },
-  { id: 'mentors', label: 'Manage Mentors', icon: <FaUser /> },
-  // { id: 'profile', label: 'Profile', icon: <FaUserCircle /> },
+  { id: 'manageMentor', label: 'Manage Mentors', icon: <FaUser /> }, // Updated ID to match the route
 ];
 
-const Sidebar = ({ setActiveSection }) => {
+const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -35,38 +22,51 @@ const Sidebar = ({ setActiveSection }) => {
     navigate('/');
   };
 
+  const handleNavigation = (id) => {
+    if (id === 'manageMentor') {
+      navigate('/manageMentor'); // Navigate to the ManageMentor page
+    } else if (id === 'courses') {
+      // Handle navigation for other buttons if needed
+      console.log('Navigate to Courses');
+    }
+    closeSidebar(); // Close the sidebar after navigation
+  };
+
   return (
-    <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-      {/* Sidebar Toggle Button */}
+    <>
+      {/* Sidebar Toggle Button for Mobile */}
       <button className="sidebar-toggle" onClick={toggleSidebar}>
         {isSidebarOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      {/* Logo Section */}
-      <div className="sidebar-logo">
-        <img src={Logo} alt="LearningNest Logo" />
-      </div>
+      {/* Sidebar Container */}
+      <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+        {/* Logo Section */}
+        <div className="sidebar-logo">
+          <img src={Logo} alt="LearningNest Logo" />
+        </div>
 
-      {/* Sidebar Links */}
-      <nav>
-        <ul className="sidebar-links" style={{ marginTop: '20px' }}>
-          {menuItems.map(({ id, label, icon }) => (
-            <li key={id}>
-              <button onClick={() => { setActiveSection(id); closeSidebar(); }}>
-                {icon} {label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        {/* Sidebar Links */}
+        <nav>
+          <ul className="sidebar-links">
+            {menuItems.map(({ id, label, icon }) => (
+              <li key={id}>
+                <button onClick={() => handleNavigation(id)}>
+                  {icon} {label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      {/* Logout Button */}
-      <div className="sidebar-logout">
-        <button onClick={handleLogout}>
-          <FaSignOutAlt /> Logout
-        </button>
-      </div>
-    </aside>
+        {/* Logout Button */}
+        <div className="sidebar-logout">
+          <button onClick={handleLogout}>
+            <FaSignOutAlt /> Logout
+          </button>
+        </div>
+      </aside>
+    </>
   );
 };
 

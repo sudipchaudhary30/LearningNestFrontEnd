@@ -4,7 +4,7 @@
 
 
 /* Navbar Container */
-.navbarlog {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@
   display: flex;
   list-style: none;
   gap: 1.5rem; /* Reduced gap for better spacing */
-  margin-left: 420px;
+  margin-left: 410px;
   padding: auto;
 }
 

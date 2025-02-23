@@ -19,6 +19,7 @@ body {
   .head {
     font-size: 2.5rem;
     margin-bottom: 20px;
+   margin: auto;
     background: linear-gradient(to right, #00aaff, #0088cc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

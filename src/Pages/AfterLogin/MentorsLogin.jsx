@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCode, FaChartBar, FaPaintBrush, FaShieldAlt, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import './MentorsLog.css';
+import '../Mentors.css';
 
 // Placeholder image for mentors without images
 import placeholderImage from '../../assets/Images/mentor-image.jpg';

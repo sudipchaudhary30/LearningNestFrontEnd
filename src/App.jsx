@@ -29,6 +29,7 @@ import ForgotPasswordPage from './Pages/ForgotPasswordPage';
 import MentorsLogin from './Pages/AfterLogin/MentorsLogin';
 import SkillsLogin from './Pages/AfterLogin/SkillsLogin';
 import CommunitiesLogin from './Pages/AfterLogin/CommunitiesLogin';
+import ManageMentor from './Pages/ManageMentor';
 
 
 
@@ -54,6 +55,8 @@ function App() {
         <Route path="/communitieslogin" element={<CommunitiesLogin />} />
         <Route path="/mentorslogin" element={<MentorsLogin />} />
         <Route path="/skillsLogin" element={<SkillsLogin />} />
+        <Route path="/manageMentor" element={<ManageMentor />} />
+       
         
         </Routes>
        
