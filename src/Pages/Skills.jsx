@@ -49,6 +49,7 @@ export const SkillsData = [
         title: 'Mobile App Development',
         image: mobileapp,
         description: 'Create cross-platform mobile apps with React Native or Flutter.',
+        path: '/mobileappDev',
       },
       {
         title: 'Backend Development',

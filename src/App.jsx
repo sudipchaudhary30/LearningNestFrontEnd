@@ -31,6 +31,7 @@ import SkillsLogin from './Pages/AfterLogin/SkillsLogin';
 import CommunitiesLogin from './Pages/AfterLogin/CommunitiesLogin';
 import ManageMentor from './Pages/AfterLogin/ManageMentor';
 import MobileAppDevelopmentCourse from './Courses/MobileAppDevelopment ';
+import DataScienceCourse from './Courses/DataScience';
 
 
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/webdevelopment" element={<WebDevelopmentCourse/>}/>
         <Route path="/mobileappDev" element={<MobileAppDevelopmentCourse />} />
+        <Route path="/datascience" element={<DataScienceCourse />} />
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/communitieslogin" element={<CommunitiesLogin />} />

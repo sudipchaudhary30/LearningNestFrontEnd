@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './FeaturedSkillsMentors.css'; // Import CSS for styling
 
 const FeaturedSkillsMentors = () => {
@@ -10,8 +11,9 @@ const FeaturedSkillsMentors = () => {
     },
     {
       title: 'Data Science',
-      image: './src/assets/Images/image2.jpg',
+      image: './src/assets/Images/Data.jpg',
       description: 'Master data analysis, machine learning, and AI.',
+      path: "/datascience", // Path for the Data Science page
     },
     {
       title: 'Graphic Design',
@@ -19,10 +21,10 @@ const FeaturedSkillsMentors = () => {
       description: 'Create stunning visuals and designs.',
     },
     {
-        title: 'Artificial Intelegience',
-        image: './src/assets/Images/image1.jpg', // Updated image path for diversity
-        description: 'Create stunning visuals and designs.',
-      },
+      title: 'Artificial Intelligence',
+      image: './src/assets/Images/Artificial.webp', // Updated image path for diversity
+      description: 'Build intelligent systems and models.',
+    },
   ];
 
   return (
@@ -37,7 +39,13 @@ const FeaturedSkillsMentors = () => {
             <div className="skill-content">
               <h3 className="skill-title">{skill.title}</h3>
               <p className="skill-description">{skill.description}</p>
-              <button className="skill-button">Learn More</button>
+              {skill.path ? (
+                <Link to={skill.path} className="skill-button">
+                  Learn More
+                </Link>
+              ) : (
+                <button className="skill-button">Learn More</button>
+              )}
             </div>
           </div>
         ))}
