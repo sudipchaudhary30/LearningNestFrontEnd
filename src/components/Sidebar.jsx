@@ -5,7 +5,7 @@ import Logo from '../assets/images/LearningNestNewLogo.png'; // Ensure correct p
 import './Sidebar.css';
 
 const menuItems = [
-  { id: 'courses', label: 'Add Courses', icon: <FaBook /> },
+  { id: 'courses', label: 'Add Skills Courses', icon: <FaBook /> },
   { id: 'manageMentor', label: 'Manage Mentors', icon: <FaUser /> }, // Updated ID to match the route
 ];
 
@@ -26,8 +26,7 @@ const Sidebar = () => {
     if (id === 'manageMentor') {
       navigate('/manageMentor'); // Navigate to the ManageMentor page
     } else if (id === 'courses') {
-      // Handle navigation for other buttons if needed
-      console.log('Navigate to Courses');
+      navigate('/admin'); // Navigate to the AdminPage
     }
     closeSidebar(); // Close the sidebar after navigation
   };

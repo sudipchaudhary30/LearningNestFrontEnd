@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/images/LearningNestNewLogo.png'; // Correct Logo Path
-import './Navbar.css'; 
+import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -32,18 +32,34 @@ const Navbar = () => {
         <img src={Logo} alt="LearningNest Logo" className="navbar-logo" />
       </div>
 
-      {/* Desktop Menu */}
-      <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
-        <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
-        <li><Link to="/skills" onClick={closeMobileMenu}>Explore Skills</Link></li>
-        <li><Link to="/mentors" onClick={closeMobileMenu}>Mentors</Link></li>
-        <li><Link to="/communities" onClick={closeMobileMenu}>Communities</Link></li>
-      </ul>
-
       {/* Mobile Menu Toggle */}
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
+
+      {/* Desktop and Mobile Menu */}
+      <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+        <li>
+          <Link to="/" onClick={closeMobileMenu}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/skills" onClick={closeMobileMenu}>
+            Explore Skills
+          </Link>
+        </li>
+        <li>
+          <Link to="/mentors" onClick={closeMobileMenu}>
+            Mentors
+          </Link>
+        </li>
+        <li>
+          <Link to="/communities" onClick={closeMobileMenu}>
+            Communities
+          </Link>
+        </li>
+      </ul>
 
       {/* Conditionally show "Get Started" button */}
       {!isAdminPage && (

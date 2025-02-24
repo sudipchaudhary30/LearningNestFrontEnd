@@ -56,6 +56,17 @@ const AuthPage = () => {
     <>
       <Navbar />
       <div className="auth-page">
+        {/* Bubbles Animation */}
+        <div className="bubbles">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Form Container */}
         <div className="form-container">
           <div className="form-toggle">
             <button
