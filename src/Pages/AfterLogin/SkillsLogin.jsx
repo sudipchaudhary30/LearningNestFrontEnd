@@ -36,6 +36,7 @@ import Digital from '../../assets/Images/Skills/DigitalForensics.webp';
 import Footer from '../../components/Footer';
 
 import NavbarSec from '../../components/NavbarSec';
+import { path } from 'framer-motion/client';
 
 export const SkillsData = [
   {
@@ -52,6 +53,7 @@ export const SkillsData = [
         title: 'Mobile App Development',
         image: mobileapp,
         description: 'Create cross-platform mobile apps with React Native or Flutter.',
+        path: '/mobileappDev'
       },
       {
         title: 'Backend Development',

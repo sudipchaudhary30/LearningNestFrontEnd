@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ManageMentor.css'; // Create this CSS file for styling
-import Sidebar from '../components/Sidebar';
+import Sidebar from '../../components/Sidebar';
 
 const ManageMentor = () => {
   const [mentors, setMentors] = useState([]);
