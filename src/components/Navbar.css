@@ -2,15 +2,15 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #4a90e2; /* Soft blue */
-  --secondary-color: #ff6b6b; /* Coral */
-  --text-color: #333333; /* Dark gray */
-  --background-color: #ffffff; /* White */
-  --hover-color: #ff4757; /* Darker coral */
+  --primary-color: #4a90e2; 
+  --secondary-color: #ff6b6b; 
+  --text-color: #333333; 
+  --background-color: #ffffff; 
+  --hover-color: #ff4757; 
   --font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar Container */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,25 +20,25 @@
   color: var(--text-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: var(--font-family);
-  position: relative; /* Ensure the navbar is positioned correctly */
+  position: relative; 
 }
 
-/* Logo */
+
 .logo img {
-  width: 150px; /* Adjusted logo size */
+  width: 150px; 
   height: auto;
-  cursor: pointer; /* Make the logo clickable */
+  cursor: pointer; 
 }
 
-/* Navigation Links */
+
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.5rem; /* Reduced gap for better spacing */
-  margin: 0;
+  gap: 1.5rem; 
+margin-right: 350px;
   padding: 0;
-  justify-content: center; /* Center the links */
-  flex: 1; /* Allow the links to take up available space */
+  justify-content: center; 
+  flex: 1; 
 }
 
 .nav-links li {
@@ -47,7 +47,7 @@
 
 .nav-links a {
   color: var(--text-color);
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none; 
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -80,14 +80,14 @@
   cursor: pointer;
   color: var(--text-color);
   transition: color 0.3s ease;
-  z-index: 1001; /* Ensure the icon is above the mobile menu */
+  z-index: 1001; 
 }
 
 .mobile-menu-icon:hover {
   color: var(--primary-color);
 }
 
-/* CTA Button */
+
 .cta-button {
   background: var(--secondary-color);
   color: var(--background-color);
@@ -98,7 +98,7 @@
   font-size: 1rem;
   font-weight: 500;
   transition: background 0.3s ease, transform 0.3s ease;
-  text-decoration: none; /* Remove underline from the button */
+  text-decoration: none;
 }
 
 .cta-button:hover {
@@ -114,29 +114,29 @@
 
   .nav-links {
     position: fixed;
-    top: 60px; /* Adjust based on your navbar height */
+    top: 60px; 
     right: 0;
     flex-direction: column;
     background: var(--background-color);
     width: 100%;
-    height: calc(100vh - 60px); /* Full height minus navbar height */
+    height: calc(100vh - 60px); 
     align-items: center;
     justify-content: center;
-    transform: translateX(100%); /* Hide the menu off-screen by default */
+    transform: translateX(100%); 
     transition: transform 0.3s ease-in-out;
-    z-index: 1000; /* Ensure the menu is above other content */
+    z-index: 1000; 
   }
 
   .nav-links.active {
-    transform: translateX(0); /* Show the menu when active */
+    transform: translateX(0); 
   }
 
   .mobile-menu-icon {
-    display: block; /* Show the mobile menu icon */
+    display: block; 
   }
 
   .cta-button {
-    display: none; /* Hide the CTA button on mobile */
+    display: none; 
   }
 }
 

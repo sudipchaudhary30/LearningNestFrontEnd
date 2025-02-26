@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const isAdminPage = location.pathname === '/admin';
 
-  // Navigate to Home when clicking the logo
+  
   const handleLogoClick = () => {
     navigate('/'); // Redirect to Home
     closeMobileMenu(); // Close mobile menu if open
@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Logo Section - Click to Navigate to Home */}
+      
       <div className="logo" onClick={handleLogoClick}>
         <img src={Logo} alt="LearningNest Logo" className="navbar-logo" />
       </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Conditionally show "Get Started" button */}
+     
       {!isAdminPage && (
         <Link to="/auth" className="cta-button" onClick={closeMobileMenu}>
           Get Started
